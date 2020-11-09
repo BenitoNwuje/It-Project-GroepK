@@ -1,0 +1,132 @@
+ <!DOCTYPE html>
+ <html lang="nl-BE">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Project opdracht group k">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Group K">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css antwerpen huisstijl-->
+    <link rel="stylesheet" href="https://cdn.antwerpen.be/core_branding_scss/4.1.1/main.min.css">
+
+    <!-- Verbindingen met documenten-->
+    <script src="javascript/leaflet.js" defer></script>
+    <script src="javascript/login.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- mapscript codes -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    
+    <title>IT-Project-Group K</title>
+ </head>
+ <body>
+
+  <header>
+    <button class="a-button-official" onclick="document.getElementById('topAanmelden').style.display='block'">
+      Log in with A-profile
+    </button>
+    
+    <div id="topAanmelden" class="loginForm">
+      <form id="loginFormActief">
+      <span onclick="document.getElementById('topAanmelden').style.display='none'" class="close" title="Afsluiten">&times;</span>
+
+      <div class="containerInloggen">
+        <label for="username"><b>Gebruikersnaam</b></label>
+        <input type="text" placeholder="Gebruikersnaam invoeren" name="userName" required>
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Password invoeren" name="password" required>
+        <button type="submit" id="loginButton">Login</button>
+      </div>
+      </form>
+    </div>
+  
+    <img src="images/logo.svg" alt="Stad antwerpen logo" id="logoA"> 
+      <nav>
+        <img src="./Images/antwerpentest.png" alt="" id="achtergrondPsn">
+        <img src="./Images/antwerpenMobile.png" alt="" id="achtergrondPsnMobile">
+        
+        <ul id="navDesktop">
+          <li><a href="www.eben.com"> <img src="./Images/home.png" alt=""><h3>HOME</h3></a></li>
+          <li> <a href="www.eben.com"><img src="./Images/locatie.png" alt=""><h3>PLAATSEN</h3></a></li>
+          <li><a href="www.eben.com"><img src="./Images/contact.png" alt=""><h3>CONTACT</h3></a> </li>
+        </ul>
+        <div class="navMobile">
+          <a href="./index.HTML"><h3>HOME</h3></a>
+        </div>
+        <div class="navMobile">
+          <a href="./index.HTML#mainMenu"><h3>PLAATSEN</h3></a>
+        </div>
+        <div class="navMobile">
+          <a href="/index.HTML#contact"><h3>CONTACT</h3></a>
+        </div>
+      </nav>
+  </header>
+
+
+  <main id="mainMenu">
+    <h1 id="welkomBericht">Groene stad antwerpen</h1>
+    <h2 id="plaatsenLijst">Plaatsen</h2>
+    <div id="stationMap" style="z-index: 0;"></div>
+    <br>
+    <br>
+    <br>
+
+    <div id="map" class="leaflet-container leaflet-fade-anim leaflet-grab leaflet-touch-drag" tabindex="0" style="position: relative;"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" role="presentation" src="https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/9/106/193?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw" class="leaflet-tile leaflet-tile-loaded" style="width: 512px; height: 512px; transform: translate3d(-49px, -482px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/9/107/193?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw" class="leaflet-tile leaflet-tile-loaded" style="width: 512px; height: 512px; transform: translate3d(463px, -482px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/9/106/194?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw" class="leaflet-tile leaflet-tile-loaded" style="width: 512px; height: 512px; transform: translate3d(-49px, 30px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/9/107/194?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw" class="leaflet-tile leaflet-tile-loaded" style="width: 512px; height: 512px; transform: translate3d(463px, 30px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-shadow-pane"><img src="https://unpkg.com/leaflet@1.6.0/dist/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(278px, 314px, 0px);"><img src="https://unpkg.com/leaflet@1.6.0/dist/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(300px, 191px, 0px);"><img src="https://unpkg.com/leaflet@1.6.0/dist/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(438px, 200px, 0px);"><img src="https://unpkg.com/leaflet@1.6.0/dist/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(125px, 163px, 0px);"></div><div class="leaflet-pane leaflet-overlay-pane"></div><div class="leaflet-pane leaflet-marker-pane"><img src="https://unpkg.com/leaflet@1.6.0/dist/images/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(278px, 314px, 0px); z-index: 314;"><img src="https://unpkg.com/leaflet@1.6.0/dist/images/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(300px, 191px, 0px); z-index: 191;"><img src="https://unpkg.com/leaflet@1.6.0/dist/images/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(438px, 200px, 0px); z-index: 200;"><img src="https://unpkg.com/leaflet@1.6.0/dist/images/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(125px, 163px, 0px); z-index: 163;"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out">−</a></div></div><div class="leaflet-top leaflet-right"><div class="leaflet-control-layers leaflet-control" aria-haspopup="true"><a class="leaflet-control-layers-toggle" href="#" title="Layers"></a><section class="leaflet-control-layers-list"><div class="leaflet-control-layers-base"><label><div><input type="radio" class="leaflet-control-layers-selector" name="leaflet-base-layers_43" checked="checked"><span> Grayscale</span></div></label><label><div><input type="radio" class="leaflet-control-layers-selector" name="leaflet-base-layers_43"><span> Streets</span></div></label></div><div class="leaflet-control-layers-separator"></div><div class="leaflet-control-layers-overlays"><label><div><input type="checkbox" class="leaflet-control-layers-selector" checked=""><span> Cities</span></div></label></div></section></div></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> | Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a></div></div></div></div>
+  </main>
+  
+  <footer id="contact">
+   <div id="footerDiv1">
+    <div id="footerDivContact">
+      <div class="contactenFooter1">
+        <address class="handtekening">
+          <p class="hoofdtitel"><b>Benito James | Scrum Master</b><br><br>Artesis Plantijn | Groep K<br> Ellermanstraat 33, 2060 Antwerpen<br>tel. +32 3 338 00 11 <br><a href="mailto:s109672@ap.be">Mail sturen</a></p>
+        </address><BR></BR>
+      </div>
+
+      <div class="contactenFooter2">
+        <address class="handtekening">
+          <p class="hoofdtitel"><b>Burak Ocbe | Development Team</b><br><br>Artesis Plantijn | Groep K<br> Ellermanstraat 33, 2060 Antwerpen<br>tel. +32 3 338 00 11 <br><a href="mailto:s116768@ap.be">Mail sturen</a></p>
+        </address><BR></BR>
+      </div>
+
+      <div class="contactenFooter3">
+        <address class="handtekening">
+          <p class="hoofdtitel"><b>Selim Kaygun | Development Team</b><br><br>Artesis Plantijn | Groep K<br> Ellermanstraat 33, 2060 Antwerpen<br>tel. +32 3 338 00 11 <br><a href="mailto:s116768@ap.be">Mail sturen</a></p>
+        </address><BR></BR>
+      </div>
+
+      <div class="contactenFooter4">
+        <address class="handtekening">
+          <p class="hoofdtitel"><b> Youssef El Hindaz | Product Owner</b><br><br>Artesis Plantijn | Groep K<br> Ellermanstraat 33, 2060 Antwerpen<br>tel. +32 3 338 00 11 <br><a href="mailto:s111023@ap.be">Mail sturen</a></p>
+        </address><BR></BR>
+      </div>
+    </div>
+     
+    <div id="footerDivSide">
+      <h6 style="color: white;">Contacteer stad antwerpen</h6><br>
+      <button class="a-button">Stad Antwerpen</button>
+      <br><br><br><br>
+      <h6 class="findUs" style="color: white;">Vind ons op</h6>
+      <br>
+      <ul class="m-button-list m-button-list--horizontal">
+        <li><a href="#" class="a-button a-button--facebook has-icon" aria-label="Facebook"><span class="fa fa-facebook"></span></a></li>
+        <li><a href="#" class="a-button a-button--twitter has-icon" aria-label="Twitter"><span class="fa fa-twitter"></span></a></li>
+        <li><a href="#" class="a-button a-button--linkedin has-icon" aria-label="LinkedIn"><span class="fa fa-linkedin"></span></a></li>
+        <li><a href="#" class="a-button a-button--instagram has-icon" aria-label="Instagram"><span class="fa fa-instagram"></span></a></li>
+      </ul>
+    </div>
+ </div>
+<div class="copy">
+   <p>Gemaakt door &copy;Group K | 2019 AP-Antwerpen.be | <a href="privacy.html">Privacy & gebruiksvoorwaarden</a></p>
+   <a href="#" class="o-footer__button a-button a-button--secondary has-icon">
+    <span class="fa fa-arrow-up"></span>
+  </a>
+  </div>
+
+  </footer>
+ </body>
+</html>

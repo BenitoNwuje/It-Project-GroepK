@@ -1,0 +1,21 @@
+{
+  "name": "buurtdata",
+  "version": "1.0.0",
+  "main": "BuurtData.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Groep K",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "leaflet": "^1.6.0",
+    "leaflet-routing-machine": "^3.2.12",
+    "node-fetch": "^2.6.0",
+    "readline-sync": "^1.4.10",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "description": ""
+}

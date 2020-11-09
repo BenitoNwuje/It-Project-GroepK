@@ -1,0 +1,448 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+/*LOGO ANTWERPEN IMG*/
+#logoA{
+  width: 72px;
+  height: 72px;
+  position: absolute;
+  top: 58px;
+}
+/*PARK SPOR NOORD ANTWERPEN IMG*/
+#achtergrondPsn{
+  width: 100%;
+  height: 100%; 
+  z-index: -1;
+   margin-top: 0px;
+}
+/*PARK SPOR NOORD ANTWERPEN IMG MOBILE*/
+#achtergrondPsnMobile{
+  display: none;
+}
+
+/* HEADER */
+
+/* Opmaak van Input typen text en password */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+  
+/* instellingen voor login button in login */
+#loginButton {
+  background-color: #0064B4;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+  
+#loginButton:hover {
+  opacity: 0.8;
+}
+  
+.containerInloggen {
+  padding: 15px;
+}
+  
+/* Login form  (achtergrond) */
+.loginForm {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 10px;
+}
+  
+  /* Actieve login form*/
+  #loginFormActief {
+    background-color: white;
+    margin: 5% auto 15% auto; 
+    border: 1px solid black;
+    width: 50%; 
+  }
+  
+  /* Afsluiten van login form (x) */
+  .close {
+    margin-right: 15px;
+    float: right;
+    color:red;
+    font-size: 45px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(77, 0, 0);
+    cursor: pointer;
+  }
+  
+/*login form */
+
+.a-button-official{
+float: right;
+margin-bottom: 5px;
+margin-top: 5px;
+}
+
+/*login button finish */
+
+/* navigatie mobile uitgezet */
+.navMobile{
+  display: none;
+}
+#navDesktop{
+  width: 100%;
+  height: 80px;
+}
+
+header {
+background-color: white;
+  height: 100%;
+  border-bottom: 1px solid gray;
+  margin-bottom: 20px;
+}
+header nav{
+  height: 100%;
+  width: 100%;
+  
+}
+header nav ul {
+  height: 100%;
+  width: 100%;
+}
+
+header nav ul li{
+  text-align: center;
+  display:inline-block;
+  position: relative;
+  width: 32.93%;
+  height: 100%;
+  bottom: 50px;
+}
+header nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+
+  
+}
+header nav ul li a img{
+background-color:white ;
+padding: 5px;
+border-radius: 20px;
+box-shadow: 0px 0px 10px 0px green;
+text-align: center;
+width: 60px;
+height: 60px;
+margin-top: 15px;
+}
+
+header nav ul li a h3{
+  background-color: white;
+  text-align: center;
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+  
+/*header finish!*/
+
+/*main start*/
+
+
+main{
+  background-color:white;
+}
+#welkomBericht{
+  text-align: center;
+}
+#plaatsenLijst{
+  text-align: center;
+}
+main article{
+  border: 2px black solid;
+  display: inline-block;
+  margin-left: 100px;
+  display: none;
+
+}   
+#stationMap {
+  width: 80%;
+  height: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*main stop*/
+
+/*FOOTER BEGIN*/
+
+footer{
+  background-color: #282020;
+}
+footer p {  
+  text-align: center;
+  color: white;
+}
+#footerDiv1{
+  width: 100%;
+  display: flex;
+}
+
+.contactenFooter1{ grid-area:selim;}
+.contactenFooter2{ grid-area:burak;}
+.contactenFooter3{ grid-area:benito;}
+.contactenFooter4{ grid-area:youssef;}
+
+#footerDivContact{
+  width: 70%;
+  display: grid;  
+  grid-template-areas:
+  'selim burak'
+  'benito youssef';
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+#footerDivSide{
+  width: 30%;
+  padding: 20px 20px 20px 20px;
+  border-left: 2px gray solid;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.findUs{
+  border-top: 1px gray solid;
+  padding-top:25px;
+}
+.copy{
+  background-color: black;
+  text-align: center;
+  display: flex;
+}
+.copy p{
+  color: white;
+margin: auto;
+}
+/*FOOTER EINDE*/
+
+/* Zoom Animation LOGIN FORM */
+#loginFormActief {
+  -webkit-animation: animatezoom 0.8s;
+  animation: animatezoom 0.8s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+
+
+
+
+/*MEDIA QUERY MOBILE */
+
+@media (min-width:0px) and (max-width:650px){
+  #stationMap {
+    width: 90%;
+    height: 650px;
+    border: black 1px solid;
+  }
+
+/*IMG*/
+#achtergrondPsnMobile{
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  margin-top: 0px;
+
+}
+#achtergrondPsn{
+  display: none;
+}
+img#logoA{
+  display: none;
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+/* HEADER */
+
+  /* Opmaak van Input typen text en password */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 20px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* instellingen voor login button */
+  .loginButton {
+    background-color: #0064B4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .loginButton:hover {
+    opacity: 0.8;
+  }
+  
+  .containerInloggen {
+    padding: 15px;
+  }
+  
+  /* Login form  (achtergrond) */
+  .loginForm {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 10px;
+  }
+  
+  /* Actieve login form*/
+  #loginFormActief {
+    background-color: white;
+    margin: 5% auto 15% auto; 
+    border: 1px solid black;
+    width: 90%; 
+    height: 50%;
+  }
+  
+  /* Afsluiten van login form (x) */
+  .close {
+    margin-right: 15px;
+    float: right;
+    color:red;
+    font-size: 45px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(75, 0, 0);
+    cursor: pointer;
+  }
+  
+/*login form */
+
+ 
+.a-button-official{
+width: 100%;
+margin-bottom: 5px;
+margin-top: 5px;
+}
+
+/*login button finish */
+
+
+header {
+background-color: white;
+  height: 100%;
+  border-bottom: 1px solid gray;
+  margin-bottom: 20px;
+} 
+#navDesktop{
+  display: none;
+}
+.navMobile{
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid black;
+
+}
+.navMobile:hover{
+  background-color: #cf0039;
+  opacity: 0.9;
+
+}
+header nav{
+  display: block;
+}
+header nav ul {
+  display: block;
+  margin: 0px;
+}
+header nav div a{
+  text-decoration: none;
+  color: black;
+}
+header nav div a:hover{
+  color: white;
+}
+  
+
+/*header finish!*/
+
+main{
+  background-color:white;
+}
+
+footer p {  
+  text-align: center;
+  color: white;
+}
+footer{
+  background-color: #282020;
+}
+/* Add Zoom Animation */
+
+#loginFormActief {
+  -webkit-animation: animatezoom 0.8s;
+  animation: animatezoom 0.8s
+}
+
+/*Tekst centreren in popup*/
+.popup{
+  text-align: center;
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+}
